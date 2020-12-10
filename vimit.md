@@ -63,6 +63,8 @@
 | `dw`   | カーソル上の一語を削除             |
 | `d$`   | カーソル位置から行の最後までを削除 |
 
+> [`daw` vs `diw`](https://stackoverflow.com/questions/7267375/what-does-vaw-mean-in-vim-in-normal-mode-and-also-caw-and-daw)
+
 ## G
 
 | 命令         | 用途                          |
@@ -147,3 +149,18 @@
 | `T{char}`   | 反向**移动**到上一个的后一个字符上 |
 
 > 在 `t` `T` `f` `F` 的结果中，用 `;` 可以继续移动，用 `,` 跳回来。
+
+## Recipes
+
+### Replace text with yanked text
+```bash
+yiw # yank text
+# move to the text you want to replace
+viwp # select replaced text and put yanked text
+```
+
+### find yanked text
+```bash
+yiw # yank text
+/<⌃ r>0⏎ # find text in register (default 0) (which we yanked)
+```
