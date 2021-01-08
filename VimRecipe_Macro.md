@@ -119,3 +119,7 @@ dd
 <!-- https://vim.fandom.com/wiki/Macros#Editing_a_macro -->
 
 ## 宏的迭代和累加
+
+## 你可能并不需要宏
+
+<!-- ctrl + v 多行选中操作 -->
